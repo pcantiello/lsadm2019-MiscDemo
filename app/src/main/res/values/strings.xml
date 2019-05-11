@@ -9,5 +9,9 @@
     <string name="presente">presente</string>
     <string name="non_presente">non presente</string>
     <string name="temp_format">%04.1f</string>
+    <string name="giroscopio">Giroscopio</string>
+    <string name="x">X</string>
+    <string name="y">Y</string>
+    <string name="z">Z</string>
 
 </resources>

@@ -24,8 +24,9 @@ class SensoriFragment : Fragment(), SensorEventListener {
     // Manager per accedere ai sensori del dispositivo
     private lateinit var sensorManager: SensorManager
 
-    // Sensori e relativi listener
+    // Sensori
     private var tempSensor: Sensor? = null
+    private var gyroSensor: Sensor? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,6 +48,10 @@ class SensoriFragment : Fragment(), SensorEventListener {
         // Verifico che sia presente il sensore di temperatura
         tempSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)
         textTemperatura.text = if (tempSensor != null) getString(R.string.presente) else getString(R.string.non_presente)
+
+        // Giroscopio
+        gyroSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE)
+        textGiroscopio.text = if (gyroSensor != null) getString(R.string.presente) else getString(R.string.non_presente)
     }
 
     /**
@@ -58,6 +63,11 @@ class SensoriFragment : Fragment(), SensorEventListener {
         // Abilito il monitoraggio del sensore di temperatura, se presente
         tempSensor?.also { temp ->
             sensorManager.registerListener(this, temp, SensorManager.SENSOR_DELAY_NORMAL)
+        }
+
+        // Monitoraggio giroscopio
+        gyroSensor?.also {
+            sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_NORMAL)
         }
 
     }
@@ -89,6 +99,11 @@ class SensoriFragment : Fragment(), SensorEventListener {
 
         when (event?.sensor?.type) {
             Sensor.TYPE_AMBIENT_TEMPERATURE -> textTemperatura.text = getString(R.string.temp_format).format(event.values[0])
+            Sensor.TYPE_GYROSCOPE -> {
+                textGiroX.text = getString(R.string.temp_format).format(event.values[0])
+                textGiroY.text = getString(R.string.temp_format).format(event.values[1])
+                textGiroZ.text = getString(R.string.temp_format).format(event.values[2])
+            }
         }
 
     }
