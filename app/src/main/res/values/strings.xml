@@ -8,4 +8,6 @@
     <string name="segnaposto">Abcd</string>
     <string name="presente">presente</string>
     <string name="non_presente">non presente</string>
+    <string name="temp_format">%04.1f</string>
+
 </resources>
