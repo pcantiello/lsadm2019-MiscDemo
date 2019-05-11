@@ -3,4 +3,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sensori">Dimostrazione Sensori</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="segnaposto">Abcd</string>
+    <string name="presente">presente</string>
+    <string name="non_presente">non presente</string>
 </resources>
