@@ -19,4 +19,7 @@
     <string name="autologin">Accesso automatico</string>
     <string name="hintUsername">nome utente</string>
     <string name="valUsernameObbligatorio">Lo username è obbligatorio</string>
+    <string name="sensors">Sensori</string>
+    <string name="mappa">Mappa</string>
+    <string name="camera">Camera</string>
 </resources>

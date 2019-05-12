@@ -8,7 +8,13 @@
               android:label="fragment_sensori" tools:layout="@layout/fragment_sensori">
         <action android:id="@+id/action_main_to_impostazioniFragment"
                 app:destination="@+id/mnuImpostazioni"/>
+        <action android:id="@+id/action_sensoriFragment_to_cameraFragment" app:destination="@id/cameraFragment"/>
+        <action android:id="@+id/action_sensoriFragment_to_mappaFragment" app:destination="@id/mappaFragment"/>
     </fragment>
     <fragment android:id="@+id/mnuImpostazioni" android:name="it.unicampania.lsadm.miscdemo.ImpostazioniFragment"
               android:label="fragment_impostazioni" tools:layout="@layout/fragment_impostazioni"/>
+    <fragment android:id="@+id/cameraFragment" android:name="it.unicampania.lsadm.miscdemo.cameraFragment"
+              android:label="fragment_camera" tools:layout="@layout/fragment_camera"/>
+    <fragment android:id="@+id/mappaFragment" android:name="it.unicampania.lsadm.miscdemo.mappaFragment"
+              android:label="fragment_mappa" tools:layout="@layout/fragment_mappa"/>
 </navigation>

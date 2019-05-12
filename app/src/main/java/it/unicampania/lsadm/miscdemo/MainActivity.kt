@@ -5,12 +5,18 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.navigation.Navigation
+import androidx.navigation.ui.setupWithNavController
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Setup Navigation controller cono bottoNavigation
+        bottomNavigation.setupWithNavController(Navigation.findNavController(this, R.id.navHost))
+
     }
 
     /**
