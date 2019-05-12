@@ -97,5 +97,5 @@ class ImpostazioniFragment : Fragment() {
         val autoLogin = sharedPref.getBoolean(PREF_AUTOLOGIN, false)
         chkAutoLogin.isChecked = autoLogin
     }
-    
+
 }
