@@ -18,5 +18,5 @@
     <string name="username">Username</string>
     <string name="autologin">Accesso automatico</string>
     <string name="hintUsername">nome utente</string>
-
+    <string name="valUsernameObbligatorio">Lo username è obbligatorio</string>
 </resources>
