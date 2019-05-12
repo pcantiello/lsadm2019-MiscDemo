@@ -5,5 +5,10 @@
             app:startDestination="@id/sensoriFragment">
 
     <fragment android:id="@+id/sensoriFragment" android:name="it.unicampania.lsadm.miscdemo.SensoriFragment"
-              android:label="fragment_sensori" tools:layout="@layout/fragment_sensori"/>
+              android:label="fragment_sensori" tools:layout="@layout/fragment_sensori">
+        <action android:id="@+id/action_main_to_impostazioniFragment"
+                app:destination="@+id/mnuImpostazioni"/>
+    </fragment>
+    <fragment android:id="@+id/mnuImpostazioni" android:name="it.unicampania.lsadm.miscdemo.ImpostazioniFragment"
+              android:label="fragment_impostazioni" tools:layout="@layout/fragment_impostazioni"/>
 </navigation>

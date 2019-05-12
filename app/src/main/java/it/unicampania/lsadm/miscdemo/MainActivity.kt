@@ -3,7 +3,8 @@ package it.unicampania.lsadm.miscdemo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
+import android.view.MenuItem
+import androidx.navigation.Navigation
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +20,19 @@ class MainActivity : AppCompatActivity() {
 
         // Imposta il menu dal file di risorse
         menuInflater.inflate(R.menu.overflow_menu, menu)
+
+        return true
+    }
+
+    /**
+     * Processa le voci del venu
+     */
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+
+        when(item?.itemId) {
+            R.id.mnuImpostazioni -> Navigation.findNavController(this, R.id.navHost).navigate(R.id.action_main_to_impostazioniFragment)
+            else -> return false    // Voce non processata
+        }
 
         return true
     }

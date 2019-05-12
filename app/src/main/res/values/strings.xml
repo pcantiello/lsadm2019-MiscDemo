@@ -14,5 +14,9 @@
     <string name="y">Y</string>
     <string name="z">Z</string>
     <string name="settings">Impostazioni</string>
+    <string name="impostazioni">Impostazioni</string>
+    <string name="username">Username</string>
+    <string name="autologin">Accesso automatico</string>
+    <string name="hintUsername">nome utente</string>
 
 </resources>
